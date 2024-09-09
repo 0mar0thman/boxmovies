@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Inconsolata:wdth,wght@103.1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style/fontawesome/all.min.css" />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css" />
+
+    <link rel="stylesheet" href="../style/cards.css" />
+    <link rel="stylesheet" href="../style/css2.css" />
+    <link rel="stylesheet" href="../style/footer.css" />
+    <link rel="stylesheet" href="../style/header.css" />
+    <link rel="stylesheet" href="../style/icon.css" />
+    <link rel="stylesheet" href="../style/js-style.css" />
+    <link rel="stylesheet" href="../style/layout.css" />
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/responsive.css" />
+    <link rel="stylesheet" href="../style/style-js-move.css" />
+    <link rel="stylesheet" href="../style/native.css" />
+    <link rel="stylesheet" href="../style/swiper.css" />
+    <link rel="stylesheet" href="../style/themes.css" />
+    <link rel="stylesheet" href="../style/nav.css" />
+
+    <title>Movie</title>
+  </head>
+  <body>
+    <div id="navBar">
+      <nav id="div-nav" class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand w-25 img-logo" href="https://omar953.github.io/boxmovies/"
+            ><img
+              class="w-50 h-100"
+              src="./recources/images/Picsart_24-08-14_19-33-33-254.png"
+              alt="BoxMovies"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <form class="form form-responsive">
+            <div id="searchResults"></div>
+            <input
+              class="input"
+              type="text"
+              placeholder="Search Boxmovies"
+              id="searchInput"
+            />
+            <h6 id="resultCount"></h6>
+            <div class="fancy-bg"></div>
+            <div class="search">
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr"
+              >
+                <g>
+                  <path
+                    d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <button class="close-btn" type="reset">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </form>
+
+          <div
+            class="collapse navbar-collapse nav-img"
+            id="navbarTogglerDemo01"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-white"
+                  aria-current="page"
+                  href="https://omar953.github.io/boxmovies-home/"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-white"
+                  aria-current="page"
+                  href="https://omar953.github.io/boxmovies-new_movies/"
+                  >New Movies</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#"
+                  >Series</a
+                >
+              </li>
+            </ul>
+          </div>
+          <a href="https://omar953.github.io/boxmovies-register/" class="btn-shine"
+            >Login Free Now</a
+          >
+        </div>
+      </nav>
+    </div>
+
+    <div class="containered">
+      <img id="backdrop_path" alt="backdrop_path" />
+
+      <div class="info">
+        <h1 id="title" class="title"></h1>
+        <p id="overview" class="overview"></p>
+        <div class="div-info" class="div-info">
+          <p id="popularity" class="popularity"></p>
+          <p id="original_title" class="original_title"></p>
+          <p id="average" class="average"></p>
+          <p id="release_date" class="release_date"></p>
+        </div>
+      </div>
+
+      <div class="img-Poster">
+        <img id="poster" alt="Poster" />
+      </div>
+
+      <div id="videoContainer"></div>
+    </div>
+
+    <div class="bg-div-card flexiblety">
+      <hr />
+      <div>
+        <h2>New Movies <i class="fa-solid fa-arrow-up-wide-short up"></i></h2>
+        <button id="nextVotePageButton">
+          <i class="fa-solid fa-angles-right"></i>
+        </button>
+      </div>
+      <hr />
+      <section id="voteCount"></section>
+    </div>
+
+    <div class="bg-div-card flexiblety">
+      <hr />
+      <div>
+        <h2>More Movies <i class="fa-solid fa-align-center up"></i></h2>
+        <button id="nextvoteAverageButton">
+          <i class="fa-solid fa-angles-right"></i>
+        </button>
+      </div>
+      <hr />
+      <section id="voteAverage"></section>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="#">Boxmovies</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+        <p>omar mohamed osman</p>
+      </div>
+    </footer>
+
+    <script src="../style/fontawesome/all.min.js"></script>
+    <script src="./bootstrap/bootstrap.min.js"></script>
+
+    <script src="./pagesJS/releaseDate.js"></script>
+    <script src="./pagesJS/voteAverage.js"></script>
+    <script src="./pagesJS/voteCount.js"></script>
+    <script src="./pagesJS/popularity.js"></script>
+    <script src="./pagesJS/searchInput.js"></script>
+
+    <script src="./pagesJS/pageMove.js"></script>
+  </body>
+</html>
